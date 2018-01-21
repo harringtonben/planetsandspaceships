@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,16 +26,28 @@ namespace planetsandspaceships
 
             planetList.Remove("Pluto");
 
-            foreach (var planet in planetList)
-            {
-                Console.WriteLine(planet);
-            }
+            ListDictionary probes = new ListDictionary();
 
-            Console.WriteLine();
-            foreach (var planet in rockyPlanets)
+            probes.Add("Mercury", "Mariner10");
+            //probes.Add("Mercury", "Messenger");
+            //probes.Add("Mercury", "BepiColombo");
+
+            foreach (var probe in probes)
             {
-                Console.WriteLine(planet);
+                Console.WriteLine(probe);
             }
+            
+
+            //foreach (var planet in planetList)
+            //{
+            //    Console.WriteLine(planet);
+            //}
+
+            //Console.WriteLine();
+            //foreach (var planet in rockyPlanets)
+            //{
+            //    Console.WriteLine(planet);
+            //}
         }
     }
 }
