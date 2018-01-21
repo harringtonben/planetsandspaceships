@@ -49,24 +49,19 @@ namespace planetsandspaceships
                     { "Huygens", "Saturn" }
             };
 
-            foreach (var probe in probes)
+            foreach (var planet in planetList)
             {
-                Console.WriteLine(probe);
+                Console.Write($"{planet}:");
+                foreach (var probe in probes)
+                {
+                    if (probe.Value == planet)
+                    {
+                        Console.Write($" {probe.Key},");
+                    }
+                }
+                Console.Write("\b \b");
+                Console.WriteLine();
             }
-
-            
-            
-
-            //foreach (var planet in planetList)
-            //{
-            //    Console.WriteLine(planet);
-            //}
-
-            //Console.WriteLine();
-            //foreach (var planet in rockyPlanets)
-            //{
-            //    Console.WriteLine(planet);
-            //}
         }
     }
 }
