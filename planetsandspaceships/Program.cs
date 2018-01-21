@@ -26,23 +26,33 @@ namespace planetsandspaceships
 
             planetList.Remove("Pluto");
 
-            List<Dictionary<string, string>> probes = new List<Dictionary<string, string>>()
+            Dictionary<string, string> probes = new Dictionary<string, string>()
             {
-                new Dictionary<string, string>
-                {
-                    { "Mariner 10", "Mercury"},
-                    { "Messenger", "Mercury"},
-                    { "BepiColombo", "Mercury"}
-                },
-                new Dictionary<string, string>
-                {
-                    { "Venera 1", "Venus"},
-                    { "Mariner 1", "Veuns"},
-                    { "Sputnik 19", "Venus"}
-                }
 
-
+                    { "Mariner 10", "Mercury" },
+                    { "Messenger", "Mercury" },
+                    { "BepiColombo", "Mercury" },
+                    { "Venera 1", "Venus" },
+                    { "Mariner 1", "Veuns" },
+                    { "Sputnik 19", "Venus" },
+                    { "Giotto", "Earth"},
+                    { "Galileo", "Earth" },
+                    { "Rosetta", "Earth" },
+                    { "Mars 1", "Mars" },
+                    { "Mariner 3", "Mars" },
+                    { "Zond 2", "Mars" },
+                    { "Voyager 1", "Jupiter" },
+                    { "Pioneer 10", "Jupiter" },
+                    { "Juno", "Jupiter" },
+                    { "Voyager 2", "Saturn" },
+                    { "Titan", "Saturn" },
+                    { "Huygens", "Saturn" }
             };
+
+            foreach (var probe in probes)
+            {
+                Console.WriteLine(probe);
+            }
 
             
             
